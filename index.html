@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/read-excel-file@4.x/bundle/read-excel-file.min.js"></script>
+  <title>Email Blaster</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  
+</head>
+
+<body>
+  <section class="w3l-simple-contact-form1">
+    <div class="contact-form section-gap">
+      <div class="wrapper">
+        <div class="text-center">
+          <h1 style="font-size: 40px; ">Email Blaster</h1>
+        </div>
+        <div class="contact-form" style="max-width: 450px; margin: 0 auto;">
+
+          <div class="form-mid">
+            <form method="post">
+
+              <div class="field">
+                <input type="text" class="form-control" name="Name" id="Name" placeholder="Name" required="">
+              </div>
+
+              <div class="field">
+                <input type="email" class="form-control" name="Sender" id="Sender" placeholder="Email" required="">
+              </div>
+
+              <div class="field">
+                <input type="password" class="form-control" name="Password" id="Password" placeholder="Password"
+                  required="">
+              </div>
+
+              <div class="field">
+                <input type="text" class="form-control" name="Subject" id="Subject" placeholder="Subject" required="">
+              </div>
+
+              <textarea name="Message" class="form-control" id="Message" placeholder="Message" required=""></textarea>
+
+              <div class="field">
+                <input type="file" id="fileinput" onclick="getExcel()">
+              </div>
+
+              <button type="submit" class="btn btn-contact" onclick="send()">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
